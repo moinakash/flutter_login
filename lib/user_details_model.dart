@@ -95,7 +95,8 @@ class UserDetailsModel {
     "home_district": homeDistrict,
     "batch": batch,
     "batch_session": batchSession,
-    "date_of_birth": "${dateOfBirth?.year.toString().padLeft(4, '0')}-${dateOfBirth?.month.toString().padLeft(2, '0')}-${dateOfBirth?.day.toString().padLeft(2, '0')}",
+    //"date_of_birth": "${dateOfBirth?.year.toString().padLeft(4, '0')}-${dateOfBirth?.month.toString().padLeft(2, '0')}-${dateOfBirth?.day.toString().padLeft(2, '0')}",
+    "date_of_birth":dateOfBirth?.day,
     "blood_group": bloodGroup,
   };
 }
