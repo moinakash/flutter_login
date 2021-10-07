@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_login/employee_list.dart';
 import 'package:flutter_login/user_details_model.dart';
+import 'package:flutter_login/view_.user.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
 
@@ -96,7 +97,9 @@ class _MyAppState extends State<MyApp> {
                 Padding(
                   padding: const EdgeInsets.only(right: 40, left: 40),
                   child: InkWell(
-                    onTap: () async {
+                    onTap: () => Get.to(ViewUser(), arguments: 4)
+
+                   /* async {
                       final String name = contactController.text;
                       final String jobTitle = passwordController.text;
 
@@ -107,11 +110,18 @@ class _MyAppState extends State<MyApp> {
                         _user = user!;
                       });
 
+
+                    Get.to(ViewUser(), arguments: _user!.id);
+
+
                       if(_user?.dateOfBirth != null) setState(()=> _value = _user?.dateOfBirth.toString().substring(0,10));
 
                       print(
                           "ID : ${_user?.id} \nNAME : ${_user?.name} \nBATCH : ${_user?.batch} \nCONTACT : ${_user?.contact} \nDATE : ${_user?.dateOfBirth}");
-                    },
+                    }*/
+
+
+                    ,
                     child: Container(
                         color: Colors.deepOrange,
                         width: double.infinity,
